@@ -108,4 +108,22 @@ ourArray would have ["J", ["cat"]].
 var myArray = [["John", 23], ["dog", 3]];
 var removedFromMyArray = myArray.shift();
 
+//-----Manipulate Arrays With unshift()--------
+var ourArray = ["Stimpson", "J", "cat"];
+ourArray.shift();
+ourArray.unshift("Happy");
+console.log(">>>>>> test unshift()");
+console.log(ourArray);
+/*
+After the shift, ourArray would have the value ["J", "cat"]. 
+After the unshift, ourArray would have the value ["Happy", "J", "cat"].
+*/
+var myArray = [["John", 23], ["dog", 3]];
+myArray.shift();
+myArray.unshift(["Paul",35]);
+console.log(myArray);
+
+//------Shopping List----------
+var myList = [["Chocolate Bar", 15], ["Shakh", 10],["pen", 5], ["lobon", 2], ["cigarate", 4]];
+
 
