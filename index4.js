@@ -175,3 +175,108 @@ function checkObj(obj, checkProp) {
     return "Not Found";
   }
 }
+//--Manipulating Complex Objects----
+//within one Object we can add multiple proparies>>>
+var myMusic = [
+  {
+
+    "artist": "Billy Joel",
+    "title": "Piano Man",
+    "release_year": 1973,
+    "formats": [
+      "CD",
+      "8T",
+      "LP"
+    ],
+    "gold": true,
+  },
+  {
+  "artist": "Daft Punk",
+  "title": "Homework",
+  "release_year": 1997,
+  "formats": [ 
+    "CD",
+    "Cassette",
+    "LP"
+  ],
+  "gold": true
+}
+];
+//---Accessing Nested Objects----
+//ex
+var ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": { 
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
+  }
+};
+ourStorage.cabinet["top drawer"].folder2;
+ourStorage.desk.drawer;
+//ourStorage.cabinet["top drawer"].folder2 would be the string secrets, 
+//and ourStorage.desk.drawer would be the string stapler.
+var myStorage = {
+  "car": {
+    "inside": {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+     },
+    "outside": {
+      "trunk": "jack"
+    }
+  }
+};
+
+var gloveBoxContents = myStorage.car.inside["glove box"];
+
+//--Accessing Nested Arrays----
+//ex
+var ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }
+];
+ourPets[0].names[1];
+ourPets[1].names[0];
+//ourPets[0].names[1] would be the string Fluffy, 
+//and ourPets[1].names[0] would be the string Spot.
+var myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+var secondTree = myPlants[1].list[1];
+
+//-----Record Collection--------
