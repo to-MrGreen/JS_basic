@@ -172,9 +172,33 @@ checkEqual(1, 2);
 function checkSign(num) {
   return (num === 0) ? "zero" 
      : (num >= 0) ? "positive" 
-     : "negative";
+     : "negative"; 
  }
  
  checkSign(10);
 
- //------------------
+ //-------Use Recursion to Create a Range of Numbers-----------
+
+var a = [];
+var b = 0;
+var c = 0;
+function rangeOfNumbers(startNum, endNum) {
+  if(b==0){
+      b=startNum;
+      c=b;
+      b++;
+      a.push(c);
+      rangeOfNumbers(b, endNum)
+    
+  }
+
+     if(b==endNum || b<endNum){
+       c=b;
+       b++;
+        a.push (c);
+        rangeOfNumbers(b, endNum)
+       }
+else if(b>endNum){
+  return a;
+}
+};
