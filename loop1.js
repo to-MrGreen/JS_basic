@@ -170,11 +170,8 @@ checkEqual(1, 2);
 
 //----------------
 function checkSign(num) {
-  return (num === 0) ? "zero" 
-     : (num >= 0) ? "positive" 
-     : "negative"; 
+  return (num === 0) ? "zero" : (num >= 0) ? "positive" : "negative"; 
  }
- 
  checkSign(10);
 
  //-------Use Recursion to Create a Range of Numbers-----------
@@ -198,7 +195,7 @@ function rangeOfNumbers(startNum, endNum) {
         a.push (c);
         rangeOfNumbers(b, endNum)
        }
-else if(b>endNum){
-  return a;
+      else if(b>endNum){
+      return a;
 }
 };
