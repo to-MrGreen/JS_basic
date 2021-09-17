@@ -110,4 +110,85 @@ function makeList(arr) {
 
 const failuresList = makeList(result.failure);
 
-//----------------------
+//------Write Concise Object Literal Declarations Using Object Property Shorthand-----
+
+//old
+const createPerson = (name, age, gender) => {
+  // Only change code below this line
+  return {
+    name: name,
+    age: age,
+    gender: gender
+  };
+  // Only change code above this line
+};
+//New ES6
+const createPerson = (name, age, gender) => ({name, age, gender});
+
+ //----------
+ // Only change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear){
+    this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+
+//-----Use class Syntax to Define a Constructor Function------
+//Ex
+var SpaceShuttle = function(targetPlanet){
+  this.targetPlanet = targetPlanet;
+}
+var zeus = new SpaceShuttle('Jupiter');
+//// new way with constructor
+
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+}
+const zeus = new SpaceShuttle('Jupiter');
+/* It should be noted that the class keyword declares a new function,
+to which a constructor is added. This constructor is invoked when new is called to create a new object.
+Note: UpperCamelCase should be used by convention for ES6 class names, as in SpaceShuttle used above.
+>>The constructor method is a special method for creating and initializing an object created with a class.
+You will learn more about it in the Object Oriented Programming section of the JavaScript Algorithms
+And Data Structures Certification.*/
+
+// Problem solve
+// Only change code below this line
+class  Vegetable{
+  constructor (name){
+  this.name = name; 
+  }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
+
+//---Use getters and setters to Control Access to an Object----
+// Only change code below this line
+class Thermostat{
+  constructor(fahrenheit){
+    this.fahrenheit = fahrenheit;
+  }
+  get temperature (){
+    return (5/9) * (this.fahrenheit - 32);
+  }
+  set temperature(celsius){
+    this.fahrenheit = (celsius * 9.0) / 5 + 32;
+  }
+}
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+
+//----------
