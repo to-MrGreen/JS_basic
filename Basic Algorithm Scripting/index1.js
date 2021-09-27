@@ -39,3 +39,48 @@ Next we chain the reverse() function, which takes our array of characters and re
 
 Finally, we chain join('') to put our characters back together into a string. Notice once again that we left no spaces in the argument for join, this makes sure that the array of characters is joined back together by each character.
 */
+
+//-----Factorialize a Number-------
+/*
+Return the factorial of the provided integer.
+
+If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.
+
+Factorials are often represented with the shorthand notation n!
+
+For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
+
+Only integers greater than or equal to zero will be supplied to the function.
+*/
+
+var factorial= 1;
+function factorialize(num) {
+  var x = num;
+  for(let i= num; i>0; i--){
+    //console.log(x);
+    factorial = factorial * x;
+    //console.log(factorial);
+    x--;
+  }
+  console.log(factorial);
+  return factorial;
+}
+
+factorialize(20);
+
+//or
+function factorialize(num) {
+  for (var product = 1; num > 0; num--) {
+    product *= num;
+  }
+  return product;
+}
+
+factorialize(5);
+
+//--Find the Longest Word in a String-----
+
+//Return the length of the longest word in the provided sentence.
+
+//Your response should be a number.
+
