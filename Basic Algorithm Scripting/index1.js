@@ -97,4 +97,62 @@ function findLongestWordLength(str) {
 
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
-//---------
+//----Return Largest Numbers in Arrays-----
+/*
+Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
+
+Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
+*/
+function largestOfFour(arr) {
+  var solve = [];
+  for(let i = 0; i<arr.length; i++){
+    var maxNum =arr[i][0];
+    for(let j =1; j< arr[i].length; j++){
+      if(arr[i][j] > maxNum){
+         maxNum = arr[i][j];
+      }
+    }
+    solve[i]= maxNum;
+  }
+  return solve;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+//----Confirm the Ending-----
+
+/*
+Check if a string (first argument, str) ends with the given target string (second argument, target).
+
+This challenge can be solved with the .endsWith() method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+*/
+
+  // we can solve like this ;)
+ // if(str.endsWith(target)== true){
+ //   return true;
+ // }
+ // else{
+  //  return false;
+ // }
+function confirmEnding(str, target) {
+  return str.slice(str.length - target.length) === target;
+}
+
+confirmEnding("He has to give me a new name", "name");
+
+//-----Repeat a String Repeat a String--------
+function repeatStringNumTimes(str, num) {
+  var result ="";
+  for(let i =0; i<num; i++){
+    result =result + str;
+  }
+  return result;
+}
+
+repeatStringNumTimes("abc", 3);
+
+//----Truncate a String-------
+/*
+Truncate a string (first argument) if it is longer than the given maximum
+ string length (second argument). Return the truncated string with a ... ending.*/
+
