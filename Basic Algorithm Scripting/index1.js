@@ -84,3 +84,17 @@ factorialize(5);
 
 //Your response should be a number.
 
+function findLongestWordLength(str) {
+  let x = str.split(' ');
+  var maxLength = 0;
+  for(let i = 0; i < x.length; i++){
+    if(x[i].length > maxLength){
+      maxLength=x[i].length;
+    }
+  }
+  return maxLength;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+//---------
