@@ -156,3 +156,77 @@ repeatStringNumTimes("abc", 3);
 Truncate a string (first argument) if it is longer than the given maximum
  string length (second argument). Return the truncated string with a ... ending.*/
 
+ function truncateString(str, num) {
+  // Clear out that junk in your trunk
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
+}
+
+//-----Finders Keepers------
+/*
+Create a function that looks through an array arr and returns the first element in it that passes a 'truth test'. This means that given an element x, the 'truth test' is passed if func(x) is true. If no element passes the test, return undefined.
+
+*/
+function findElement(arr, func) {
+  let num = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    num = arr[i];
+    if (func(num)) {
+      return num;
+    }
+  }
+
+  return undefined;
+}
+
+//-----Boo who-------
+/*
+Check if a value is classified as a boolean primitive. Return true or false.
+
+Boolean primitives are true and false.
+
+*/
+
+
+function booWho(bool) {
+  return typeof bool === "boolean";
+}
+
+// test here
+booWho(null);
+
+// or
+function booWho(bool) {
+  if(bool === true){
+    return true;
+  }
+  else if(bool === false){
+    return true;
+  }
+  else{return false;}
+}
+
+booWho(null);
+
+//-----Title Case a Sentence----------
+/*
+Title Case a Sentence
+Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.
+
+For the purpose of this exercise, you should also capitalize connecting words like the and of.
+*/
+function titleCase(str) {
+  var convertToArray = str.toLowerCase().split(" ");
+  var result = convertToArray.map(function(val) {
+    return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+  });
+  return result.join(" ");
+}
+
+titleCase("I'm a little tea pot");
+
+//------Slice and Splice------
